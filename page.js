@@ -46,10 +46,7 @@ let yearly = function () {
   disMth.style.display = "none";
   disYear.style.display = "flex";
 };
-let moveBtn = function(e) {
-  e.preventDefault(), 
-  togBtn.style.transform = 'translateX(20px)';
-} 
+
 // Events
 nextPage.addEventListener("click", navPages);
 show.addEventListener("click", navPages);
