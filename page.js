@@ -1,12 +1,12 @@
 // Page 1
-let pageOne = document.querySelector("#page-one");
-let showPage1 = document.querySelector("#show-page-1");
-let nextPage1 = document.querySelector("#next-1");
+let pageOne = document.querySelectorAll("#page-one");
+let showPage1 = document.querySelectorAll("#show-page-1");
+let nextPage = document.querySelector("#next");
 
 // Page 2
 let pageTwo = document.querySelector("#page-two");
 let showPage2 = document.querySelector("#show-page-2");
-let nextPage = document.querySelector(".page");
+let togBtn = document.querySelector('.togbtn');
 
 // Page 3
 let pageThree = document.querySelector("#page-three");
@@ -15,45 +15,44 @@ let showPage3 = document.querySelector("#show-page-3");
 // Page 4
 let pageFour = document.querySelector("#page-four");
 let showPage4 = document.querySelector("#show-page-4");
-let changeMth = document.querySelector("#yearly-4");
-let disMth = document.querySelector("#month-4");
-let disYear = document.querySelector("#yearly-4-1");
+let mth = document.querySelector('#monthly-4');
+
+let disMth = document.querySelectorAll("#month-4");
+
+let disYear = document.querySelectorAll("#yearly-4-1");
+
 
 // Arrays
-let showPages = [showPage1, showPage2, showPage3, showPage4];
 let show = document.querySelector(".show");
-
-let pages = [{pageOne}, {pageTwo}, {pageThree}, {pageFour}];
+let hidPage = document.querySelector(".hidden");
+let showPages = [showPage1, showPage2, showPage3, showPage4];
+const pages = [{ pageOne }, { pageTwo }, { pageThree }, { pageFour }];
 // Loops
 
-// pages.forEach(page => {});
-showPages.forEach(b => {});
-for (let i = 0; i < pages.length; i++) {}
 // Functions
 let navPages = function (e) {
-    e.preventDefault();
-  if (pages[i] === b) {
-    pages[i].style.display = "flex";
-  } else{
-    pages[i].style.display = 'none';
+  e.preventDefault();
+  for (let i = 0; i < showPages.length; i++) {
+  }
+  for (let i = 0; i < pages.length; i++) {
+    if (pages[i] === showPages[i]) {
+      pages[i].style.display = "none";
+    }
   }
 };
-let chgPage = function (e) {
-  e.preventDefault();
-  pageTwo.style.display = "none";
-  pageThree.style.display = "flex";
-};
+
 let yearly = function () {
   e.preventDefault();
   disMth.style.display = "none";
-  disYear.style.display = "block";
+  disYear.style.display = "flex";
 };
+let moveBtn = function(e) {
+  e.preventDefault(), 
+  togBtn.style.transform = 'translateX(20px)';
+} 
 // Events
-nextPage1.addEventListener("click", function (e) {
-  e.preventDefault();
-  nextPage1.classList.toggle('hide');
-  pageTwo.style.display = "flex";
-});
+nextPage.addEventListener("click", navPages);
 show.addEventListener("click", navPages);
 // nextPage.addEventListener('click', chgPage);
-// changeMth.addEventListener('click', yearly);
+mth.addEventListener('click', yearly);(
+togBtn.addEventListener('mouseover', moveBtn));

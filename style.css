@@ -8,13 +8,14 @@
   display: block;
 }
 
+
 /* Mobile-view */
 @media only screen and (max-width: 426px) {
   /* Page 1 */
   .desktop-view {
     display: none;
   }
-  body {
+  .page-one {
     display: flex;
     flex-direction: column;
     background-color: hsla(240, 33%, 94%, 0.5);
@@ -109,6 +110,10 @@
     border: 1px hidden black;
   }
   /* Page 2 */
+  .page-two{
+    display: flex;
+    flex-direction: column;
+  }
   .container-2 {
     background-color: white;
     padding: 20px;
@@ -213,6 +218,10 @@
     font-size: 20px;
   }
   /* Page 3 */
+  .page-three{
+    display: flex;
+    flex-direction: column;
+  }
   .container-3 {
     background-color: white;
     padding: 20px;
@@ -309,6 +318,10 @@
     border: 1px hidden black;
   }
   /* Page 4 */
+  .page.fourr{
+    display: flex;
+    flex-direction: column;
+  }
   .page-four {
     display: block;
   }
@@ -415,19 +428,14 @@
   }
 }
 @media only screen and (min-width: 426px) {
-  #page-two{
-    display: none;
-  }
   /* Page 1 */
   .mobile-view {
     display: none;
   }
-  body {
+  .page-one {
     background-color: white;
-    /* display: flex; */
     gap: 100px;
-    display: flex;
-    /* display: block; */
+    display: none;
   }
   main{
     width: 80%;
@@ -529,6 +537,9 @@
     font-size: 25px;
   }
   /* Page 2 */
+  .page-two{
+    display: flex;
+  }
   .container-2 {
     background-color: white;
     padding: 40px;
@@ -638,6 +649,9 @@
     border: 1px hidden black;
   }  
   /* Page 3 */
+  .page-three{
+    display: none;
+  }
   .container-3 {
     background-color: white;
     padding: 40px;
@@ -733,6 +747,9 @@
     border: 1px hidden black;
   }
   /* Page 4 */
+  .page-fourr{
+    display: none;
+  }
   .yearly-4 {
     display: none;
   }
