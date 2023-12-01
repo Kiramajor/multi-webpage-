@@ -435,7 +435,7 @@
   .page-one {
     background-color: white;
     gap: 100px;
-    display: none;
+    display: flex;
   }
   main{
     width: 80%;
@@ -538,7 +538,7 @@
   }
   /* Page 2 */
   .page-two{
-    display: flex;
+    display: none;
   }
   .container-2 {
     background-color: white;
